@@ -114,7 +114,7 @@ for ($i = 1; $i <= $count; $i++) {
     
     $stomp->send($destination, $message);
 
-    echo sprintf("  ✔ Mensagem %d enviada com sucesso para %s!\n", $i, $destination);
+    echo sprintf("    Mensagem %d enviada com sucesso para %s!\n", $i, $destination);
     echo sprintf("    Persistência: %s | Prioridade: %d\n", $headers['persistent'], $priority);
     echo sprintf("    Payload (amostra): Temp: %.1f°C | OD: %.1f mg/L | pH: %.1f | Status: %s\n",
         $payloadData['dados_sensor']['temperatura_celsius'],
@@ -125,7 +125,7 @@ for ($i = 1; $i <= $count; $i++) {
 
     // Se não for a última mensagem, aguarda o intervalo configurado
     if ($i < $count) {
-        echo sprintf("  ⏳ Aguardando %d segundo(s) antes do próximo envio...\n\n", $interval);
+        echo sprintf("   Aguardando %d segundo(s) antes do próximo envio...\n\n", $interval);
         
         // Exibe progresso a cada 10 segundos se o intervalo for longo (ex: 60s)
         if ($interval >= 20) {

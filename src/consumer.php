@@ -111,7 +111,7 @@ while ((time() - $startTime) < $timeout) {
     usleep(200000); // 200ms
 }
 
-echo sprintf("[%s] [Instância #%s] ⚠️ Timeout de %d segundos atingido sem mensagens.\n",
+echo sprintf("[%s] [Instância #%s] Timeout de %d segundos atingido sem mensagens.\n",
     date('H:i:s'), $instanceId, $timeout
 );
 exit(2);
